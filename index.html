@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Juhyun Bae — Computer vision researcher working on image restoration, computational photography, and learning-based data augmentation." />
+  <meta name="theme-color" content="#8a1538" />
+  <title>Juhyun Bae — Research Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Home">JB<span>.</span></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#work">Work</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#about">About</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-button" type="button" aria-label="Toggle color theme">◐</button>
+      <a class="button button-small" href="assets/docs/Juhyun_Bae_CV.pdf" target="_blank" rel="noopener">CV ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> M.S. Candidate · Korea University</p>
+        <h1>Building vision models that understand <em>how images are formed.</em></h1>
+        <p class="hero-lede">I am <strong>Juhyun Bae</strong>, a computer vision researcher focused on image restoration, computational photography, and learning-based data augmentation.</p>
+        <div class="hero-actions">
+          <a class="button" href="#work">Explore research ↓</a>
+          <a class="text-link" href="mailto:qowngus33@gmail.com">qowngus33@gmail.com ↗</a>
+        </div>
+      </div>
+      <aside class="hero-card reveal delay-1">
+        <div class="portrait-wrap"><img src="assets/images/profile.png" alt="Portrait of Juhyun Bae" /></div>
+        <div class="hero-card-body">
+          <p class="mono">CURRENTLY</p>
+          <p>Deep Image Processing Laboratory<br>Korea University</p>
+          <div class="mini-rule"></div>
+          <p class="mono">RESEARCH INTERESTS</p>
+          <div class="chips"><span>Image Restoration</span><span>Computational Photography</span><span>Data Augmentation</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="metric-strip shell reveal" aria-label="Selected achievements">
+      <div><strong>+2.45 dB</strong><span>GoPro 10% over baseline</span></div>
+      <div><strong>36.41 dB</strong><span>Real-world OLED PSNR</span></div>
+      <div><strong>2nd</strong><span>Samsung AI Challenge 2024</span></div>
+      <div><strong>3.7×</strong><span>Faster TensorRT pipeline</span></div>
+    </section>
+
+    <section id="work" class="section shell">
+      <div class="section-heading reveal"><p class="eyebrow">Selected work</p><h2>Research shaped by physical priors, learning, and deployment.</h2></div>
+
+      <article class="project project-featured reveal">
+        <div class="project-copy">
+          <div class="project-index mono">01 / CURRENT RESEARCH</div>
+          <h3>Trajectory-aware Differentiable Blur Augmentation</h3>
+          <p class="project-subtitle">Image Deblurring · Target: ICLR 2027</p>
+          <p>Conventional blur augmentation mainly changes motion magnitude or orientation. This work models richer camera and object motion trajectories and learns differentiable perturbations jointly with the deblurring objective.</p>
+          <ul class="clean-list"><li>Global camera + spatially varying local object motion</li><li>Differentiable warping and temporal blur synthesis</li><li>Learnable augmentation optimized for deblurring generalization</li></ul>
+          <div class="result-grid"><div><b>31.37</b><span>GoPro 10% PSNR</span></div><div><b>28.98</b><span>HIDE, 10% setting</span></div><div><b>+2.45</b><span>dB vs. baseline</span></div></div>
+          <div class="tags"><span>PyTorch</span><span>CUDA</span><span>DDP</span><span>Mixed Precision</span><span>LMDB</span></div>
+        </div>
+        <div class="project-media media-stack">
+          <figure><img src="assets/images/trajectory-diversity.jpg" alt="Trajectory-space coverage and blur augmentation comparison" loading="lazy"><figcaption>Trajectory-space coverage & augmentation examples</figcaption></figure>
+          <figure><img src="assets/images/trajectory-reblur.png" alt="Trajectory-aware reblur network architecture" loading="lazy"><figcaption>Global-local trajectory-aware reblur model</figcaption></figure>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-card-top"><span class="mono">02 / PUBLISHED</span><span class="pill">JSID 2026 · Co-first</span></div>
+          <h3>DnSAD</h3><p class="project-subtitle">Defocus and Spatially Adaptive Deblurring for Display Mura Compensation</p>
+          <div class="card-image"><img src="assets/images/dnsad-framework.jpg" alt="DnSAD PSF-aware deblurring framework" loading="lazy"></div>
+          <p>PSF-aware spatially varying deblurring for an LG Display industry-academia project, combining measured optical priors with deep Wiener deconvolution, spatial attention, and multi-scale refinement.</p>
+          <div class="result-inline"><span><b>36.41 dB</b> real OLED</span><span><b>0.6474</b> MAE-MURA</span></div>
+          <div class="tags"><span>PSF Modeling</span><span>Wiener Deconvolution</span><span>Image Restoration</span></div>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <div class="project-card-top"><span class="mono">03 / CHALLENGE</span><span class="pill">Samsung AI Challenge 2024</span></div>
+          <h3>Machine Learning Force Fields</h3><p class="project-subtitle">Molecular Energy / Force Prediction + OOD Uncertainty</p>
+          <div class="card-image"><img src="assets/images/mlff-framework.jpg" alt="Machine learning force field framework" loading="lazy"></div>
+          <p>Optimized MACE-based graph neural networks through architecture search, hyperparameter tuning, and ensembles, with Gaussian Process Regression for OOD uncertainty estimation.</p>
+          <div class="result-inline"><span><b>5.56 → 2.66</b> EF score</span><span><b>0.9994</b> OOD AUROC</span></div>
+          <div class="tags"><span>GNN</span><span>MACE</span><span>GPR</span><span>Ensemble</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card-top"><span class="mono">04 / DEPLOYMENT</span><span class="pill">KIST 2023</span></div>
+          <h3>Vision-based Safety Equipment Inspection</h3><p class="project-subtitle">Real-time PPE Inspection & Access Control</p>
+          <div class="card-image"><img src="assets/images/ppe-framework.jpg" alt="Multi-stage PPE inspection pipeline" loading="lazy"></div>
+          <p>Built a 17K-image dataset and a multi-stage YOLOv7 + classifier pipeline, then optimized the full system with TensorRT for deployment in a laboratory access-control kiosk.</p>
+          <div class="result-inline"><span><b>92.2 → 98.0</b> mAP</span><span><b>71 → 19 ms</b> latency</span></div>
+          <div class="tags"><span>YOLOv7</span><span>EfficientNet</span><span>TensorRT</span><span>Deployment</span></div>
+        </article>
+
+        <article class="project-card project-card-minimal reveal delay-1">
+          <div class="project-card-top"><span class="mono">05 / VLM</span><span class="pill">SeoulTech 2024</span></div>
+          <h3>Image Aesthetics Assessment</h3><p class="project-subtitle">Vision-Language Models</p>
+          <p>Research on image aesthetics assessment and captioning using vision-language models, including layer-wise embedding analysis of multimodal language model decoders for visual information processing.</p>
+          <div class="big-type">VLM</div>
+          <div class="tags"><span>Vision-Language Models</span><span>Representation Analysis</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section shell publications">
+      <div class="section-heading reveal"><p class="eyebrow">Publications</p><h2>Selected papers.</h2></div>
+      <div class="publication-list reveal">
+        <article><span class="pub-year mono">2026</span><div><h3>DnSAD: Defocus and Spatially Adaptive Deblurring for Mura Compensation in Display Panels</h3><p>G. Park†, <strong>J. Bae†</strong>, J. Kim, C. Hong, S.-W. Jung · <i>Journal of the Society for Information Display</i>, 34(3):99–108 · †Co-first authors</p></div><span class="pub-badge">Journal</span></article>
+        <article><span class="pub-year mono">2025</span><div><h3>Intrinsic Decomposition-Based Curriculum Learning for Low-Light Image Enhancement</h3><p>J. Kim, G. Park, <strong>J. Bae</strong>, S.-W. Jung · <i>IEEE Signal Processing Letters</i>, 32:4019–4023</p></div><span class="pub-badge">IEEE SPL</span></article>
+        <article><span class="pub-year mono">2025</span><div><h3>Layer-wise Embedding Analysis of Multimodal Language Model Decoders for Visual Information Processing</h3><p><strong>J. Bae</strong>, et al. · Institute of Electronics and Information Engineers (IEIE)</p></div><span class="pub-badge">Conference</span></article>
+      </div>
+    </section>
+
+    <section id="experience" class="section shell two-col-section">
+      <div class="section-heading sticky-heading reveal"><p class="eyebrow">Experience</p><h2>Research across imaging, scientific ML, and real-time vision.</h2></div>
+      <div class="timeline reveal">
+        <article><span class="timeline-dot"></span><div class="timeline-meta mono">MAR 2025 — PRESENT</div><h3>Graduate Researcher · Korea University</h3><p>Deep Image Processing Laboratory. Research in image restoration, computational photography, and learning-based data augmentation.</p></article>
+        <article><span class="timeline-dot"></span><div class="timeline-meta mono">FEB — NOV 2024</div><h3>Undergraduate Researcher · SeoulTech</h3><p>Computer Vision Laboratory. Vision-language models for aesthetics assessment and machine learning force fields for Samsung AI Challenge 2024.</p></article>
+        <article><span class="timeline-dot"></span><div class="timeline-meta mono">FEB — SEP 2023</div><h3>Research Intern · KIST</h3><p>Center for Artificial Intelligence. PPE detection, second-stage classification, TensorRT optimization, and kiosk deployment.</p></article>
+      </div>
+    </section>
+
+    <section id="about" class="section shell about-grid">
+      <div class="about-copy reveal"><p class="eyebrow">About</p><h2>From computer science to physically grounded computer vision.</h2><p>I received my B.S. in Computer Science and Engineering from Seoul National University of Science and Technology, graduating as valedictorian with a 4.38/4.50 GPA. I am currently an M.S. candidate in Electrical Engineering at Korea University under Prof. Seung-Won Jung.</p><p>My work connects deep learning with image formation and real-world system constraints — from measured PSFs and motion trajectories to inference acceleration and deployment.</p>
+        <div class="document-links"><a href="assets/docs/Juhyun_Bae_CV.pdf" target="_blank">CV <span>↗</span></a><a href="assets/docs/Juhyun_Bae_Research_Portfolio.pdf" target="_blank">Research Portfolio <span>↗</span></a><a href="assets/docs/Juhyun_Bae_Career_Description.pdf" target="_blank">Career Description <span>↗</span></a></div>
+      </div>
+      <div class="skills-panel reveal delay-1">
+        <p class="mono">TOOLKIT</p>
+        <div class="skill-row"><span>Deep Learning</span><p>PyTorch · CUDA · Distributed Training · Mixed Precision</p></div>
+        <div class="skill-row"><span>Models</span><p>CNN · Transformer · GNN · Vision-Language Models</p></div>
+        <div class="skill-row"><span>Optimization</span><p>TensorRT · Hyperparameter Optimization · Ensemble Learning</p></div>
+        <div class="skill-row"><span>Development</span><p>Python · C++ · MATLAB · Docker · Linux · Git</p></div>
+      </div>
+    </section>
+
+    <section class="contact shell reveal">
+      <p class="eyebrow">Contact</p><h2>Interested in research that bridges imaging physics and deep learning?</h2>
+      <a class="contact-email" href="mailto:qowngus33@gmail.com">qowngus33@gmail.com <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="shell"><p>© <span id="year"></span> Juhyun Bae</p><p class="mono">SEOUL · KOREA</p></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
