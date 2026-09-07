@@ -172,3 +172,73 @@ footer p{margin:0}
   .profile-card img{width:82px;height:100px}
   .metrics,.metrics.compact{grid-template-columns:1fr 1fr}
 }
+
+/* Formal academic portfolio refinements */
+.hero{
+  padding:76px 0 64px;
+  grid-template-columns:minmax(0,1fr) 240px;
+  gap:68px;
+}
+.hero-copy{max-width:790px}
+.hero .kicker{
+  margin-bottom:12px;
+  color:var(--muted);
+  font-size:11px;
+  letter-spacing:.065em;
+  text-transform:none;
+}
+h1{
+  margin-bottom:7px;
+  font-size:clamp(40px,5vw,56px);
+  line-height:1.08;
+  letter-spacing:-.04em;
+  font-weight:720;
+}
+.hero-role{
+  margin-bottom:22px;
+  color:#3f3f3f;
+  font-size:19px;
+  font-weight:600;
+  letter-spacing:-.015em;
+}
+.hero-lede{
+  max-width:720px;
+  margin-bottom:26px;
+  font-size:16px;
+  line-height:1.72;
+}
+.hero-links{gap:10px 20px}
+.hero-links a{
+  font-size:13px;
+  text-underline-offset:3px;
+}
+.hero-links .primary-link{
+  padding:0;
+  background:none;
+  color:var(--text);
+  border-radius:0;
+  font-weight:650;
+  border-bottom:1px solid var(--text);
+}
+.profile-card{padding:15px}
+.summary{padding:26px 0}
+.section-title h2{font-size:34px}
+.project h3{font-size:25px}
+
+@media(max-width:860px){
+  .hero{padding:62px 0 50px;gap:36px}
+}
+@media(max-width:720px){
+  .hero{padding:36px 0 38px;gap:26px}
+  h1{font-size:clamp(36px,11vw,45px);line-height:1.04}
+  .hero-role{font-size:17px;margin-bottom:16px}
+  .hero-lede{font-size:14px;line-height:1.7;margin-bottom:21px}
+  .hero-links{display:flex;flex-wrap:wrap;gap:9px 18px}
+  .hero-links a{display:inline;min-height:0;padding:0;border:0;font-size:12px;text-align:left}
+  .hero-links .primary-link{border-bottom:1px solid var(--text)}
+  .section-title h2{font-size:27px}
+}
+@media(max-width:390px){
+  h1{font-size:36px}
+  .hero-links{display:flex}
+}
