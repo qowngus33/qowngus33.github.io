@@ -19,6 +19,18 @@ img{display:block;max-width:100%}
 .nav{display:flex;gap:26px}
 .nav a{font-size:14px;text-decoration:none;color:var(--muted)}
 .nav a:hover{color:var(--text)}
+.nav .game-mode-link{
+  margin-left:4px;
+  padding:7px 11px;
+  border:1px solid var(--accent);
+  border-radius:999px;
+  color:var(--accent);
+  font-size:12px;
+  font-weight:750;
+  letter-spacing:.02em;
+  transition:background .18s ease,color .18s ease,transform .18s ease;
+}
+.nav .game-mode-link:hover{background:var(--accent);color:#fff;transform:translateY(-1px)}
 .hero{padding:96px 0 78px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:76px;align-items:center}
 .kicker{margin:0 0 14px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
 h1,h2,h3,p{margin-top:0}
@@ -119,6 +131,7 @@ footer p{margin:0}
   .nav{display:flex;width:100%;gap:18px;overflow-x:auto;white-space:nowrap;padding-bottom:2px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .nav::-webkit-scrollbar{display:none}
   .nav a{flex:0 0 auto;font-size:12px}
+  .nav .game-mode-link{margin-left:auto;padding:4px 9px;font-size:11px}
 
   .hero{display:flex;flex-direction:column;padding:42px 0 42px;gap:30px;align-items:stretch}
   .hero-copy{order:1}

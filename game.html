@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#171717" />
+  <meta name="description" content="Play through Juhyun Bae's journey in computer vision research." />
+  <title>Journey to Clarity — Juhyun Bae</title>
+  <link rel="stylesheet" href="assets/css/game.css" />
+  <link rel="stylesheet" href="assets/css/editor-theme.css" />
+</head>
+<body>
+  <header class="game-header">
+    <a class="game-brand" href="index.html"><span class="window-dots" aria-hidden="true">● ● ●</span> juhyun.dev</a>
+    <div class="journey-status" aria-label="Journey progress">
+      <span id="statusYear">2020</span>
+      <div class="progress-track"><span id="progressFill"></span></div>
+    </div>
+    <div class="star-counter" id="starCounter" aria-label="Collected memory stars">
+      <span aria-hidden="true">★</span><strong id="starCount">0</strong><small>/ 8</small>
+      <span aria-hidden="true">🪙</span><strong id="coinCount" aria-label="Coins">0</strong>
+    </div>
+    <a class="exit-link" href="index.html">Exit game <span aria-hidden="true">×</span></a>
+  </header>
+
+  <main class="game-shell">
+    <div class="editor-tabs"><span class="active">⚡ journey.js <b>×</b></span><span>README.md</span><span>memories.json</span><small>main* · JavaScript</small></div>
+    <div class="hud-instruction" id="hudInstruction">
+      <span class="desktop-instruction">Move <kbd>A</kbd><kbd>D</kbd> or <kbd>←</kbd><kbd>→</kbd> · Jump / explore / close <kbd>Space</kbd></span>
+      <span class="mobile-instruction">Move, jump over bugs, and collect every memory star</span>
+    </div>
+
+    <section class="game-viewport" id="gameViewport" tabindex="0" aria-label="Interactive career timeline">
+      <div class="sky-noise"></div>
+      <div class="cloud cloud-one"></div>
+      <div class="cloud cloud-two"></div>
+      <div class="cloud cloud-three"></div>
+
+      <div class="game-world" id="gameWorld">
+        <div class="distant-city" aria-hidden="true"></div>
+        <div class="path-line" aria-hidden="true"></div>
+
+        <section class="opening-scene" style="--x:120px">
+          <p class="eyebrow">// MY FIRST COMMIT</p>
+          <h1><span class="syntax-purple">const</span> journey =<br><span class="syntax-green">“hello, world!”</span></h1>
+          <p>Walk through the moments that shaped<br>me into a computer vision researcher.</p>
+          <span class="start-arrow">MOVE RIGHT&nbsp; →</span>
+        </section>
+
+        <button class="timeline-station" style="--x:900px;--tone:#5975a9" data-star-id="0" data-year="2020" data-title="The first line of code" data-subtitle="SeoulTech · Computer Science" data-image="assets/images/profile.png" data-tag="ORIGIN" data-body="I began studying computer science at SeoulTech and discovered that images could be understood, transformed, and restored through code. This became the starting point of my work in computer vision." data-skills="Python,Machine Learning,Computer Vision">
+          <span class="year-sign">2020</span>
+          <span class="station-frame"><img src="assets/images/profile.png" alt="Juhyun Bae" /></span>
+          <span class="station-label">The journey begins</span>
+        </button>
+
+        <button class="timeline-station" style="--x:1800px;--tone:#6c8a73" data-star-id="1" data-year="2022" data-title="Building for real users" data-subtitle="Hanium ICT Mentoring · Award" data-image="assets/images/2022_ICT_web.webp" data-tag="FIRST QUEST" data-body="I developed a pet-healthcare chatbot with my team and learned how data collection, model evaluation, and collaboration turn an idea into a working product." data-skills="NLP,Data Pipeline,Teamwork">
+          <span class="year-sign">2022</span>
+          <span class="station-frame photo-frame photo-ict"><img src="assets/images/2022_ICT_web.webp" alt="Juhyun Bae presenting the pet healthcare chatbot at ICT Mentoring Expo" /></span>
+          <span class="station-label">Pet healthcare chatbot</span>
+          <span class="achievement">AWARD UNLOCKED</span>
+        </button>
+
+        <button class="timeline-station" style="--x:2750px;--tone:#497f87" data-star-id="2" data-year="2023" data-title="Vision meets the real world" data-subtitle="KIST AI·Robot Institute · Research Intern" data-image="assets/images/2023_KIST_web.webp" data-tag="FIELD MISSION" data-body="I built a real-time PPE inspection pipeline from a 17K-image dataset to TensorRT deployment. The project taught me to evaluate AI not only by accuracy, but also by whether it works reliably on an actual device." data-skills="Object Detection,TensorRT,Deployment" data-metric="71 → 19 ms latency">
+          <span class="year-sign">2023</span>
+          <span class="station-frame photo-frame photo-kist"><img src="assets/images/2023_KIST_web.webp" alt="Deployed KIST safety equipment inspection kiosk" /></span>
+          <span class="station-label">KIST · PPE inspection</span>
+          <span class="achievement">REAL-TIME VISION</span>
+        </button>
+
+        <button class="timeline-station" style="--x:3700px;--tone:#896b34" data-star-id="4" data-year="2024" data-title="A team challenge" data-subtitle="Samsung AI Challenge · 2nd Place" data-image="assets/images/2024_Samsung_web.webp" data-tag="CHALLENGE ARENA" data-body="Our team designed a molecular energy and force prediction system with uncertainty estimation. Rapid experimentation, careful validation, and weighted ensembles carried us to second place." data-skills="GNN,Ensemble Learning,Uncertainty" data-metric="2nd Place · OOD AUROC 0.9994">
+          <span class="year-sign">2024</span>
+          <span class="station-frame photo-frame photo-samsung"><img src="assets/images/2024_Samsung_web.webp" alt="Samsung AI Challenge award ceremony" /></span>
+          <span class="station-label">Samsung AI Challenge</span>
+          <span class="achievement gold">2ND PLACE</span>
+        </button>
+
+        <button class="timeline-station" style="--x:4550px;--tone:#6a628a" data-star-id="3" data-year="2024" data-title="Teaching AI to describe aesthetics" data-subtitle="Undergraduate Research · Multimodal LLM" data-image="assets/images/2024_IQA_web.webp" data-tag="RESEARCH BRANCH" data-body="I extended Q-ALIGN into a multi-task multimodal language model that predicts aesthetic scores and explains visual quality in natural language. This project connected computer vision with language-model reasoning." data-skills="Vision-Language Model,LoRA,Image Aesthetics" data-metric="SRCC 0.783 · PLCC 0.782">
+          <span class="year-sign">2024</span>
+          <span class="station-frame photo-frame photo-iqa"><img src="assets/images/2024_IQA_web.webp" alt="Juhyun Bae presenting multimodal image aesthetics research" /></span>
+          <span class="station-label">Image aesthetics · MLLM</span>
+          <span class="achievement">MULTIMODAL VISION</span>
+        </button>
+
+        <button class="timeline-station" style="--x:5250px;--tone:#927745" data-star-id="7" data-year="2025" data-title="Graduating at the top of my major" data-subtitle="SeoulTech · Computer Science · Graduation" data-image="assets/images/2025-graduation.jpeg" data-tag="ACADEMIC MILESTONE" data-body="In 2025, I graduated from SeoulTech ranked first in my Computer Science major. This milestone marked the completion of my undergraduate studies and the beginning of a new chapter in computer vision research." data-skills="Computer Science,Academic Excellence,Computer Vision" data-metric="Ranked 1st in major · 전공 수석 졸업">
+          <span class="year-sign">2025</span>
+          <span class="station-frame photo-frame photo-graduation"><img src="assets/images/2025-graduation.jpeg" alt="SeoulTech graduation ceremony in 2025" /></span>
+          <span class="station-label">SeoulTech · 전공 수석 졸업</span>
+          <span class="achievement gold">1ST IN MAJOR</span>
+        </button>
+
+        <button class="timeline-station" style="--x:6000px;--tone:#87415b" data-star-id="5" data-year="2025" data-title="From sixteen shots to one" data-subtitle="LG Display · Industry–Academia Project" data-image="assets/images/game-dnsad.png" data-tag="INDUSTRY BOSS" data-body="I modeled the display and optical system instead of treating blur as an abstract artifact. The resulting spatially adaptive deblurring method reduced a sixteen-shot inspection process to a single capture." data-skills="Deblurring,Optics-aware AI,Research" data-metric="16 → 1 shot · JSID Co-first Author">
+          <span class="year-sign">2025</span>
+          <span class="station-frame"><img src="assets/images/game-dnsad.png" alt="DnSAD deblurring results" /></span>
+          <span class="station-label">LG Display · DnSAD</span>
+          <span class="achievement">PAPER PUBLISHED</span>
+        </button>
+
+        <button class="timeline-station final-station" style="--x:6800px;--tone:#8a1538" data-star-id="6" data-year="2026" data-title="Learning the motion behind blur" data-subtitle="Korea University · M.S. Research" data-image="assets/images/game-motion-aug.png" data-tag="CURRENT QUEST" data-body="I reframed blur augmentation as a motion-learning problem. By modeling global camera motion and local object motion, I built a differentiable augmentation system that expands realistic trajectory diversity for robust deblurring." data-skills="Differentiable Rendering,Motion Modeling,Distributed Training" data-metric="+2.45 dB · NRF Research Grant">
+          <span class="year-sign">2026</span>
+          <span class="station-frame"><img src="assets/images/game-motion-aug.png" alt="Trajectory-aware blur augmentation" /></span>
+          <span class="station-label">Trajectory-aware augmentation</span>
+          <span class="achievement">CURRENT RESEARCH</span>
+        </button>
+
+        <section class="next-stage" style="--x:7240px">
+          <span class="lock">◇</span>
+          <p>NEXT STAGE</p>
+          <h2>AI Engineer</h2>
+          <span>A new problem awaits.</span>
+          <a href="index.html#contact">Continue together →</a>
+        </section>
+
+        <div class="coin-row coin-row-one" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="coin-row coin-row-two" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div id="bugLayer" aria-hidden="true"></div>
+
+        <div class="player" id="player" aria-label="Claude-inspired orange star character">
+          <div class="player-shadow"></div>
+          <div class="pixel-person claude-character">
+            <svg viewBox="0 0 100 100" aria-hidden="true" class="claude-mark">
+              <g fill="none" stroke="#eaa080" stroke-width="8" stroke-linecap="round">
+                <path d="M49 49L48 8M49 49L69 12M49 49L85 24M49 49L93 44M49 49L87 65M49 49L73 86M49 49L51 93M49 49L30 87M49 49L12 72M49 49L7 51M49 49L12 30M49 49L29 13"/>
+              </g>
+              <path fill="#eaa080" d="M35 35L52 30L66 40L68 55L55 68L38 64L30 49Z"/>
+            </svg>
+          </div>
+          <span class="player-name">JUHYUN</span>
+        </div>
+
+        <div class="ground" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <div class="interaction-hint" id="interactionHint" aria-live="polite">Press Space to explore</div>
+
+    <div class="mobile-controls" aria-label="Movement controls">
+      <button type="button" id="moveLeft" aria-label="Move left">←</button>
+      <button type="button" id="openProject" aria-label="Jump or open nearby project">JUMP</button>
+      <button type="button" id="moveRight" aria-label="Move right">→</button>
+    </div>
+  </main>
+
+  <div class="intro-overlay" id="introOverlay" role="dialog" aria-modal="true" aria-labelledby="introTitle">
+    <div class="intro-card">
+      <p>JUHYUN.DEV / INTERACTIVE MODE</p>
+      <h2 id="introTitle">hello, world<span class="syntax-green">_</span></h2>
+      <span>Jump over moving bugs, open each memory,<br>and collect all eight stars.</span>
+      <button type="button" id="startGame">▶ Run journey <b>↵</b></button>
+      <a href="index.html">View the classic portfolio instead</a>
+    </div>
+  </div>
+
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <button class="modal-backdrop" type="button" data-close-modal aria-label="Close project"></button>
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
+      <div class="star-award" id="starAward" aria-live="polite"><span>★</span><b>MEMORY STAR</b></div>
+      <div class="modal-visual"><img id="modalImage" src="" alt="" /></div>
+      <div class="modal-content">
+        <p class="modal-tag" id="modalTag"></p>
+        <div class="modal-year" id="modalYear"></div>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-subtitle" id="modalSubtitle"></p>
+        <p class="modal-body" id="modalBody"></p>
+        <div class="modal-metric" id="modalMetric"></div>
+        <div class="skill-chips" id="modalSkills"></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="completion-modal" id="completionModal" aria-hidden="true">
+    <div class="completion-backdrop"></div>
+    <article class="completion-card" role="dialog" aria-modal="true" aria-labelledby="completionTitle">
+      <p>JOURNEY COMPLETE</p>
+      <h2 id="completionTitle">Build successful<span class="syntax-green"> ✓</span></h2>
+      <div class="completion-stars" id="completionStars" aria-label="Collected stars"></div>
+      <strong id="completionScore"></strong>
+      <p id="completionCoins" class="completion-coins"></p>
+      <span id="completionMessage"></span>
+      <section class="guestbook">
+        <h3>Leave your name</h3>
+        <p>Your nickname, message, stars and coins are sent to this site's Supabase guestbook and are published immediately. Use a nickname, not private information. Scores are for fun, not verified rankings.</p>
+        <form id="guestbookForm">
+          <label for="visitorName">Name / nickname</label>
+          <input id="visitorName" name="name" maxlength="24" required autocomplete="off" placeholder="Your nickname" />
+          <label for="visitorMessage">Message (optional)</label>
+          <input id="visitorMessage" name="message" maxlength="160" autocomplete="off" placeholder="Leave a short message" />
+          <button id="saveVisit" type="submit">Save my visit</button>
+        </form>
+        <p id="guestbookStatus" role="status"></p>
+        <ul id="guestbookEntries"></ul>
+      </section>
+      <div class="completion-actions">
+        <button type="button" id="keepExploring">Keep exploring</button>
+        <a href="index.html">Classic portfolio →</a>
+      </div>
+      <small>Press Space to continue exploring</small>
+    </article>
+  </div>
+
+  <script src="assets/js/guestbook.js"></script>
+  <script src="assets/js/game.js"></script>
+  <script src="assets/js/code-background.js"></script>
+</body>
+</html>

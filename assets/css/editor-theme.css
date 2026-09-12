@@ -1,0 +1,74 @@
+/* Game-only editor skin. The academic portfolio keeps its original styles. */
+:root{--ink:#e1e7f5;--paper:#202535;--burgundy:#b5a0ff;--ground:#161b28;--mono:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+body{background:#121622;color:var(--ink);font-family:var(--mono)}
+.game-header{background:#191e2c;border-color:#363e55;gap:20px}
+.game-brand{white-space:nowrap}.window-dots{color:#ff8d9d;letter-spacing:3px;margin-right:10px;text-shadow:0 0 12px #ff8d9d30}
+.exit-link,.intro-card>a{color:#bac4d9}.exit-link span{border-color:#505b75}
+.progress-track{background:#343c52;border-radius:8px}#progressFill{background:#97e6bc}
+.star-counter{background:#2d2b3e;border-color:#5a4e70;border-radius:8px;color:#ffe19b}.star-counter small{color:#c4bed2}.star-counter>span{text-shadow:none}
+.game-shell{display:flex;flex-direction:column}
+.editor-tabs{display:flex;align-items:stretch;flex:0 0 38px;background:#171c29;border-bottom:1px solid #363e55;font:11px var(--mono);color:#929eb7;overflow:hidden}
+.editor-tabs>span{padding:12px 20px;white-space:nowrap;border-right:1px solid #2c3448}.editor-tabs .active{color:#c9baff;background:#232a3b;border-top:2px solid #b5a0ff;padding-top:10px}.editor-tabs b{margin-left:24px;font-weight:400;color:#7d8aa5}.editor-tabs small{margin:auto 20px auto auto;white-space:nowrap;color:#96cbb1}
+.hud-instruction{flex:0 0 38px;background:#22293b;border-color:#363e55;color:#b8c3d9;font-size:10px}
+kbd{background:#313b52;border-color:#53617e;color:#eff2ff}
+.game-viewport{flex:1;min-height:0;height:auto;background:radial-gradient(ellipse at 30% 20%,#35304b80,transparent 65%),linear-gradient(#1c2232,#171d2b)}
+.game-world{min-height:0;background-image:linear-gradient(#7180a30c 1px,transparent 1px),linear-gradient(90deg,#7180a30c 1px,transparent 1px);background-size:32px 32px}
+.cloud,.distant-city,.sky-noise{display:none}
+.ground{background:linear-gradient(#a891f7 0 3px,#2b3146 3px 12px,#141a28 12px);border:0}
+.ground:after{content:"TERMINAL   ›   npm run journey          ● running          branch: life/main";inset:55px 0 0 28px;background:none;color:#73849e;font:11px var(--mono);letter-spacing:.08em;white-space:nowrap}
+.path-line{border-color:#97e6bc38}
+.syntax-purple{color:#bdabff}.syntax-green{color:#97e6bc}
+.opening-scene h1{font-family:var(--mono);font-size:43px;line-height:1.15;letter-spacing:-.04em}
+.opening-scene>p:not(.eyebrow),.next-stage>span{color:#a9b6ce}.opening-scene .eyebrow{color:#7f90ac}.start-arrow{color:#97e6bc}
+.station-frame{padding:23px 7px 7px;background:#2a3348;border:1px solid #5a6680;border-radius:10px;box-shadow:7px 9px 0 #090d1855;transform:rotate(-1deg)}
+.station-frame:before{content:"● ● ●   preview.png";position:absolute;left:10px;top:7px;color:#b6a6df;font:8px var(--mono)}
+.station-frame img{border-radius:3px;filter:none}
+.timeline-station[data-star-id="5"] .station-frame img,.timeline-station[data-star-id="6"] .station-frame img{object-fit:contain}
+.station-label{background:#252e42;border-color:#4d5b79;border-radius:7px;color:#d9e2f4;text-align:left;padding-left:18px}
+.station-label:before{content:"› ";color:#97e6bc}
+.year-sign{background:#292f45;border:2px solid #9d8bd7;border-radius:8px;color:#d5c9ff;box-shadow:0 0 20px #b5a0ff18}.year-sign:after{background:#596380}
+.achievement{border-color:#252e42;border-radius:5px}.timeline-station:after{background:#332f42;border-color:#bda368;color:#ffe19b;box-shadow:3px 4px #080b1644}.timeline-station.collected:after{background:#ffe19b;color:#665026}
+.timeline-station.nearby{filter:drop-shadow(0 0 14px #b5a0ff44)}
+.player-name{background:#2e3954;color:#aeeaca;border-radius:4px}.body{background:#b5a0ff}.body:after{background:#69bea0}
+.bug-body{background:#fc8ba0}.bug-2 .bug-body{background:#9bd8b7}.bug-3 .bug-body{background:#b5a0ff}
+.next-stage h2{font-family:var(--mono)}.next-stage .lock{border-color:#8c80b9}.next-stage a{background:#b5a0ff;color:#1b2030;border-radius:7px}
+.interaction-hint{background:#303b55;border:1px solid #627295;border-radius:8px;color:#e1e7f5}
+.intro-overlay,.modal-backdrop{background:#090d19cc}
+.intro-card,.modal-card,.completion-card{background:#202738;border:1px solid #52607b;border-radius:16px;box-shadow:0 24px 100px #0007;}
+.intro-card{position:relative;padding-top:60px}.intro-card:before{content:"● ● ●                     welcome.ts";position:absolute;top:0;left:0;right:0;padding:13px 18px;text-align:left;background:#2c3449;border-bottom:1px solid #46516a;border-radius:16px 16px 0 0;color:#baa9ed;font:10px var(--mono)}
+.intro-card h2,.modal-content h2,.completion-card h2{font-family:var(--mono);letter-spacing:-.055em}.intro-card h2{font-size:38px}
+.intro-card>span,.modal-body,.completion-card>span{color:#b8c5db}.intro-card button{background:#a8e6c5;color:#172c27;border-radius:8px}.intro-card button:hover{background:#c3f6dc}
+.modal-close{background:#303b53;color:#e4eaff;border-color:#7583a1;border-radius:8px}.modal-close:hover{background:#536180}
+.modal-visual,.modal-visual img{background:#fff;filter:none}.modal-visual{display:flex;align-items:center;justify-content:center}.modal-visual img{height:auto;max-height:600px;object-fit:contain}
+.modal-year,.modal-subtitle{color:#98abc7}.modal-metric{background:#30364c;color:#c4efd9;border-color:#97e6bc;border-radius:0 6px 6px 0}.skill-chips span{border-color:#505c78;color:#bfcdef;background:#293248;border-radius:5px}
+.star-award{background:#34304b;border:1px solid #6f608c;border-radius:6px}
+.completion-backdrop{background:radial-gradient(circle,#39304cbb,#090d19ee)}
+.completion-card>strong,.completion-card .completion-coins{color:#ffe19b}.completion-card>small{color:#98a7c0}
+.completion-actions button,.completion-actions a{border-color:#71829f;color:#d5e2f7;border-radius:7px}.completion-actions a{background:#a8e6c5;color:#172c27;border-color:#a8e6c5}
+.guestbook{border-color:#47536d}.guestbook p{color:#aebcd2}.guestbook input{background:#151c2b;border-color:#536481;color:#e8efff;border-radius:6px}.guestbook input::placeholder{color:#8d9cb5}.guestbook button{background:#b5a0ff;color:#211b38;border-radius:6px}.guestbook ul{color:#c9d6eb}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #97e6bc;outline-offset:3px}
+@media(max-width:760px){.game-header{gap:8px}.window-dots{display:none}.editor-tabs>span{padding-left:12px;padding-right:12px}.editor-tabs>span:not(.active),.editor-tabs small{display:none}.hud-instruction{flex-basis:34px}.opening-scene h1{font-size:34px}.intro-card h2{font-size:31px}.mobile-controls button{background:#2b3650}.mobile-controls #openProject{background:#7863aa}.modal-visual img{height:100%;max-height:215px}.modal-visual{padding:6px}.completion-card h2{font-size:27px}}
+@media(max-height:650px){.timeline-station{height:310px}.station-frame{height:140px;top:10px}.station-label{top:174px}.achievement{top:135px}.opening-scene h1{font-size:32px}.opening-scene{bottom:150px}.opening-scene>p:not(.eyebrow){font-size:11px}.start-arrow{margin-top:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* v6: animated source-code backdrop, terracotta star avatar, readable bugs. */
+.game-shell{isolation:isolate;background:radial-gradient(ellipse at 30% 20%,#35304b80,transparent 65%),linear-gradient(#1c2232,#171d2b)}
+.game-viewport{z-index:1;background:transparent}
+.editor-tabs,.hud-instruction{position:relative;z-index:2}
+.code-background{position:absolute;left:0;width:100%;z-index:0;pointer-events:none}
+.code-effects-toggle{flex-shrink:0;margin:5px 10px 5px auto;padding:0 9px;border:1px solid #66598a;border-radius:5px;background:#2e2942;color:#cfbfff;font:10px var(--mono);cursor:pointer}
+.player .claude-character{left:1px;top:12px;width:72px;height:72px;image-rendering:auto;filter:drop-shadow(0 0 9px #eaa08060)}
+.claude-mark{width:100%;height:100%;overflow:visible}
+.player.walking .claude-mark{animation:claudeWobble .32s ease-in-out infinite alternate}
+.player.jumping .claude-mark{animation:claudeSpin .8s linear infinite}
+@keyframes claudeWobble{from{transform:translateY(0) rotate(-9deg)}to{transform:translateY(-5px) rotate(9deg)}}
+@keyframes claudeSpin{to{transform:rotate(360deg)}}
+.game-bug{filter:drop-shadow(0 0 4px #ffb4d270) drop-shadow(0 4px 3px #080b16)}
+.bug-body,.bug-body:before{border-color:#fff0d9}
+.bug-body:before{background:#ffc69d}
+.bug-antenna,.bug-legs{background:#ffe6c9}
+.bug-legs{box-shadow:13px 0 #ffe6c9,26px 0 #ffe6c9}
+.bug-body i{background:#36263f}
+.photo-graduation img{object-fit:contain;background:#eee2ce}
+.completion-stars{gap:6px}
+@media(max-width:760px){.completion-stars{gap:3px}.completion-stars span{font-size:25px}}
